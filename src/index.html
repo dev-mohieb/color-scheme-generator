@@ -1,17 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon & Thumbnail -->
-    
+
     <!-- Title & Links -->
     <title>Color Scheme Generator | Mohieb</title>
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/dist/output.css" />
     <script src="/src/index.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body class="flex flex-col justify-center items-center min-h-screen bg-slate-300">
+    <main class="flex px-[14px] py-6 bg-white dark:bg-[#1F2937]">
+      <form class="flex items-center gap-3">
+        <input
+          class="w-[61px] h-[42px] bg-[#E5E5E5] border-x-2 outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
+          type="color"
+          name="seedcolor"
+          id="seedcolor"
+        />
+        <select
+          class="w-[312px] pl-2 py-1 text-2xl bg-white text-[#111827] border-[#D1D5DB] border rounded-md dark:bg-[#1F293A] dark:text-[#D5D4D8] dark:border-white outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
+          name="scheme"
+          id="scheme"
+        >
+          <option
+            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+            value="Monochrome"
+          >
+            Monochrome
+          </option>
+          <option
+            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+            value="Monochrome-dark"
+          >
+            Monochrome-dark
+          </option>
+          <option
+            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+            value="Monochrome-light"
+          >
+            Monochrome-light
+          </option>
+          <option
+            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+            value="Analogic"
+          >
+            Analogic
+          </option>
+          <option
+            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+            value="Complement"
+          >
+            Complement
+          </option>
+          <option
+            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+            value="Analogic-complement"
+          >
+            Analogic-complement
+          </option>
+          <option
+            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+            value="Triad"
+          >
+            Triad
+          </option>
+        </select>
+        <button
+          class="p-[10px] bg-white text-[#374151] border-[#D1D5DB] border rounded-md dark:bg-[#3D4B60] dark:text-white outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
+          type="submit"
+        >
+          Get color scheme
+        </button>
+      </form>
+    </main>
+    <section class="flex w-full max-w-[570px]">
+        <div class="w-full h-[414px] bg-red-300"></div>
+        <div class="w-full h-[414px] bg-red-400"></div>
+        <div class="w-full h-[414px] bg-red-500"></div>
+        <div class="w-full h-[414px] bg-red-600"></div>
+        <div class="w-full h-[414px] bg-red-700"></div>
+    </section>
+  </body>
 </html>
