@@ -1,87 +1,146 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon & Thumbnail -->
-
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- Title & Links -->
     <title>Color Scheme Generator | Mohieb</title>
     <link rel="stylesheet" href="/dist/output.css" />
-    <script src="/src/index.js" defer></script>
+    <script src="/index.js" defer></script>
   </head>
-  <body class="flex flex-col justify-center items-center min-h-screen bg-slate-300">
-    <main class="flex px-[14px] py-6 bg-white dark:bg-[#1F2937]">
-      <form class="flex items-center gap-3">
-        <input
-          class="w-[61px] h-[42px] bg-[#E5E5E5] border-x-2 outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
-          type="color"
-          name="seedcolor"
-          id="seedcolor"
-        />
-        <select
-          class="w-[312px] pl-2 py-1 text-2xl bg-white text-[#111827] border-[#D1D5DB] border rounded-md dark:bg-[#1F293A] dark:text-[#D5D4D8] dark:border-white outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
-          name="scheme"
-          id="scheme"
+  <body
+    class="flex flex-col justify-center items-center min-h-screen font-Inter bg-slate-300 dark:bg-slate-950"
+  >
+    <section class="text-center m-auto">
+      <main class="flex px-[14px] py-6 bg-white dark:bg-[#1F2937]">
+        <form class="flex flex-wrap justify-center items-center gap-3">
+          <input
+            class="w-[61px] h-[42px] bg-[#E5E5E5] border-x-2 outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
+            type="color"
+            name="seedcolor"
+            id="seedcolor"
+          />
+          <div
+            class="relative flex items-center w-[312px] text-base font-medium bg-white text-[#111827] border-[#D1D5DB] border rounded-md dark:bg-[#1F293A] dark:text-[#D5D4D8] dark:border-white"
+          >
+            <span class="absolute right-4">
+              <img src="/src/images/arrow-icon.svg" alt="" />
+            </span>
+            <select
+              class="appearance-none bg-transparent w-full pl-3 py-2 outline-sky-300 outline-offset-[3px] focus:outline-dashed outline-2 rounded-md"
+              name="scheme"
+              id="scheme"
+            >
+              <option
+                class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+                value="Monochrome"
+              >
+                Monochrome
+              </option>
+              <option
+                class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+                value="Monochrome-dark"
+              >
+                Monochrome-dark
+              </option>
+              <option
+                class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+                value="Monochrome-light"
+              >
+                Monochrome-light
+              </option>
+              <option
+                class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+                value="Analogic"
+              >
+                Analogic
+              </option>
+              <option
+                class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+                value="Complement"
+              >
+                Complement
+              </option>
+              <option
+                class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+                value="Analogic-complement"
+              >
+                Analogic-complement
+              </option>
+              <option
+                class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
+                value="Triad"
+              >
+                Triad
+              </option>
+            </select>
+          </div>
+
+          <button
+            class="p-3 text-xs bg-white text-[#374151] border-[#D1D5DB] border rounded-md dark:bg-[#3D4B60] dark:text-white outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
+            type="submit"
+          >
+            Get color scheme
+          </button>
+        </form>
+      </main>
+      <section id="colors" class="flex flex-col sm:flex-row">
+        <div
+          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
         >
-          <option
-            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
-            value="Monochrome"
-          >
-            Monochrome
-          </option>
-          <option
-            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
-            value="Monochrome-dark"
-          >
-            Monochrome-dark
-          </option>
-          <option
-            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
-            value="Monochrome-light"
-          >
-            Monochrome-light
-          </option>
-          <option
-            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
-            value="Analogic"
-          >
-            Analogic
-          </option>
-          <option
-            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
-            value="Complement"
-          >
-            Complement
-          </option>
-          <option
-            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
-            value="Analogic-complement"
-          >
-            Analogic-complement
-          </option>
-          <option
-            class="bg-white text-[#111827] dark:bg-[#1F2937] dark:text-[#D5D4D8]"
-            value="Triad"
-          >
-            Triad
-          </option>
-        </select>
-        <button
-          class="p-[10px] bg-white text-[#374151] border-[#D1D5DB] border rounded-md dark:bg-[#3D4B60] dark:text-white outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
-          type="submit"
+          <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
+          <div
+            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+          ></div>
+        </div>
+        <div
+          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
         >
-          Get color scheme
-        </button>
-      </form>
-    </main>
-    <section class="flex w-full max-w-[570px]">
-        <div class="w-full h-[414px] bg-red-300"></div>
-        <div class="w-full h-[414px] bg-red-400"></div>
-        <div class="w-full h-[414px] bg-red-500"></div>
-        <div class="w-full h-[414px] bg-red-600"></div>
-        <div class="w-full h-[414px] bg-red-700"></div>
+          <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
+          <div
+            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+          ></div>
+        </div>
+        <div
+          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
+        >
+          <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
+          <div
+            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+          ></div>
+        </div>
+        <div
+          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
+        >
+          <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
+          <div
+            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+          ></div>
+        </div>
+        <div
+          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
+        >
+          <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
+          <div
+            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+          ></div>
+        </div>
+      </section>
     </section>
+    <footer class="text-[#2B283A] dark:text-white mt-4 sm:mt-auto">
+      <p>
+        Created by <a href="github.com/dev-mohieb">Mohieb</a>
+      </p>
+    </footer>
   </body>
 </html>
