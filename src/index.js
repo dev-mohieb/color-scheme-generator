@@ -4,7 +4,7 @@ const colorContainers = colorsSection.children;
 
 // first fetch to setup the page
 fetch(
-    `https://www.thecolorapi.com/scheme?hex=000000&mode=monochrome&count=5`
+    `https://www.thecolorapi.com/scheme?hex=fb7495&mode=analogic&count=5`
   )
     .then((res) => res.json())
     .then((data) => {
