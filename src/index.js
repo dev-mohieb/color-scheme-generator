@@ -69,6 +69,6 @@ form.addEventListener("submit", (e) => {
 document.addEventListener("click", (e) => {
   if (e.target.dataset.value) {
     navigator.clipboard.writeText(e.target.dataset.value);
-    console.log(e.target.dataset.value);
+    prompt(`${e.target.dataset.value} has been copied to the clipboard.`);
   }
 });
