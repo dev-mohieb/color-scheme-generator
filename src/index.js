@@ -7,7 +7,7 @@ const modeIcon = document.querySelector("i");
 const getSchemeBtn = document.querySelector("#get-scheme");
 
 // first fetch to setup the page
-fetch(`https://www.thecolorapi.com/scheme?hex=fb7495&mode=analogic&count=5`)
+fetch(`https://www.thecolorapi.com/scheme?hex=fb7495&mode=monochrome&count=5`)
   .then((res) => res.json())
   .then((data) => {
     // used a for loop to connect the data array and the
