@@ -4,7 +4,7 @@ const colorContainers = colorsSection.children;
 
 // first fetch to setup the page
 fetch(
-    `https://www.thecolorapi.com/scheme?hex=000000&mode=monochrome&count=5`
+    `https://www.thecolorapi.com/scheme?hex=fb7495&mode=analogic&count=5`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -68,7 +68,9 @@ form.addEventListener("submit", (e) => {
 
 document.addEventListener("click", (e) => {
   if (e.target.dataset.value) {
-    navigator.clipboard.writeText(e.target.dataset.value);
-    console.log(e.target.dataset.value);
+    navigator.clipboard.writeText(e.target.dataset.value)
+      .then( () => {
+        alert(`${e.target.dataset.value} has been copied to the clipboard.`);
+    })
   }
 });
