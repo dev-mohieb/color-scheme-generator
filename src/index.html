@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon & Thumbnail -->
-    
+
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,29 +15,29 @@
     />
     <!-- Title & Links -->
     <title>Color Scheme Generator | Mohieb</title>
-    <link rel="stylesheet" href="/dist/output.css" />
-    <script src="/index.js" defer></script>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script src="/src/index.js" defer></script>
   </head>
   <body
-    class="flex flex-col justify-center items-center min-h-screen font-Inter bg-slate-300 dark:bg-slate-950"
+    class="flex min-h-screen flex-col items-center justify-center bg-slate-300 font-Inter dark:bg-slate-950"
   >
-    <section class="text-center m-auto">
-      <main class="flex px-[14px] py-6 bg-white dark:bg-[#1F2937]">
-        <form class="flex flex-wrap justify-center items-center gap-3">
+    <section class="m-auto text-center">
+      <main class="flex bg-white px-[14px] py-6 dark:bg-[#1F2937]">
+        <form class="flex flex-wrap items-center justify-center gap-3">
           <input
-            class="w-[61px] h-[42px] bg-[#E5E5E5] border-x-2 outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
+            class="h-[42px] w-[61px] border-x-2 bg-[#E5E5E5] outline-2 outline-offset-2 outline-sky-300 focus:outline-dashed"
             type="color"
             name="seedcolor"
             id="seedcolor"
           />
           <div
-            class="relative flex items-center w-[312px] text-base font-medium bg-white text-[#111827] border-[#D1D5DB] border rounded-md dark:bg-[#1F293A] dark:text-[#D5D4D8] dark:border-white"
+            class="relative flex w-[312px] items-center rounded-md border border-[#D1D5DB] bg-white text-base font-medium text-[#111827] dark:border-white dark:bg-[#1F293A] dark:text-[#D5D4D8]"
           >
             <span class="absolute right-4">
               <img src="/src/images/arrow-icon.svg" alt="" />
             </span>
             <select
-              class="appearance-none bg-transparent w-full pl-3 py-2 outline-sky-300 outline-offset-[3px] focus:outline-dashed outline-2 rounded-md"
+              class="w-full appearance-none rounded-md bg-transparent py-2 pl-3 outline-2 outline-offset-[3px] outline-sky-300 focus:outline-dashed"
               name="scheme"
               id="scheme"
             >
@@ -87,7 +87,7 @@
           </div>
 
           <button
-            class="p-3 text-xs bg-white text-[#374151] border-[#D1D5DB] border rounded-md dark:bg-[#3D4B60] dark:text-white outline-sky-300 outline-offset-2 focus:outline-dashed outline-2"
+            class="rounded-md border border-[#D1D5DB] bg-white p-3 text-xs text-[#374151] outline-2 outline-offset-2 outline-sky-300 focus:outline-dashed dark:bg-[#3D4B60] dark:text-white"
             type="submit"
           >
             Get color scheme
@@ -96,51 +96,49 @@
       </main>
       <section id="colors" class="flex flex-col sm:flex-row">
         <div
-          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
+          class="aspect-[10/3] w-full bg-white dark:bg-[#1F2937] sm:aspect-auto"
         >
           <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
           <div
-            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+            class="bg-inherit px-6 py-3 text-xs text-[#2B283A] dark:text-[#D5D4D8]"
           ></div>
         </div>
         <div
-          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
+          class="aspect-[10/3] w-full bg-white dark:bg-[#1F2937] sm:aspect-auto"
         >
           <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
           <div
-            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+            class="bg-inherit px-6 py-3 text-xs text-[#2B283A] dark:text-[#D5D4D8]"
           ></div>
         </div>
         <div
-          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
+          class="aspect-[10/3] w-full bg-white dark:bg-[#1F2937] sm:aspect-auto"
         >
           <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
           <div
-            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+            class="bg-inherit px-6 py-3 text-xs text-[#2B283A] dark:text-[#D5D4D8]"
           ></div>
         </div>
         <div
-          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
+          class="aspect-[10/3] w-full bg-white dark:bg-[#1F2937] sm:aspect-auto"
         >
           <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
           <div
-            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+            class="bg-inherit px-6 py-3 text-xs text-[#2B283A] dark:text-[#D5D4D8]"
           ></div>
         </div>
         <div
-          class="w-full bg-white dark:bg-[#1F2937] aspect-[10/3] sm:aspect-auto"
+          class="aspect-[10/3] w-full bg-white dark:bg-[#1F2937] sm:aspect-auto"
         >
           <div class="aspect-[10/3] sm:aspect-auto sm:h-[414px]"></div>
           <div
-            class="py-3 px-6 text-xs text-[#2B283A] dark:text-[#D5D4D8] bg-inherit"
+            class="bg-inherit px-6 py-3 text-xs text-[#2B283A] dark:text-[#D5D4D8]"
           ></div>
         </div>
       </section>
     </section>
-    <footer class="text-[#2B283A] dark:text-white mt-4 sm:mt-auto">
-      <p>
-        Created by <a href="github.com/dev-mohieb">Mohieb</a>
-      </p>
+    <footer class="mt-4 text-[#2B283A] dark:text-white sm:mt-auto">
+      <p>Created by <a href="github.com/dev-mohieb">Mohieb</a></p>
     </footer>
   </body>
 </html>
