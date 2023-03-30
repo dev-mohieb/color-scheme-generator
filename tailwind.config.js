@@ -9,6 +9,6 @@ module.exports = {
     },
   },
   plugins: [],
-  // darkMode: 'class'
+  darkMode: 'class'
   // will later add a button
 }
