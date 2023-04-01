@@ -53,7 +53,6 @@ form.addEventListener("submit", (e) => {
   const { seedcolor, scheme } = colorData;
   // gives transition effect on new colors
   for (let i = 0; i < colorContainers.length; i++) {
-    let delay = 100
     colorContainers[i].children[0].style.cssText = `
     opacity: 0;
     transition: .2s ease;
@@ -67,7 +66,7 @@ form.addEventListener("submit", (e) => {
     .then((data) => {
       // used a for loop to connect the data array and the
       // divs array
-      
+
       for (let i = 0; i < colorContainers.length; i++) {
         // colored divs
         colorContainers[i].children[0].style.cssText = `
