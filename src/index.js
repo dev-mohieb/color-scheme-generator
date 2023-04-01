@@ -14,6 +14,11 @@ fetch(`https://www.thecolorapi.com/scheme?hex=fb7495&mode=analogic&count=5`)
     // divs array
     for (let i = 0; i < colorContainers.length; i++) {
       // colored divs
+      colorContainers[i].children[0].style.cssText = `
+        background-color: ${data.colors[i].hex.value};
+        opacity: 100;
+        `;
+
       colorContainers[i].children[0].style.backgroundColor =
         data.colors[i].hex.value;
 
@@ -46,6 +51,14 @@ form.addEventListener("submit", (e) => {
     scheme: formData.get("scheme").toLowerCase(),
   };
   const { seedcolor, scheme } = colorData;
+  // gives transition effect on new colors
+  for (let i = 0; i < colorContainers.length; i++) {
+    let delay = 100
+    colorContainers[i].children[0].style.cssText = `
+    opacity: 0;
+    transition: .2s ease;
+    `;
+  }
 
   fetch(
     `https://www.thecolorapi.com/scheme?hex=${seedcolor}&mode=${scheme}&count=5`
@@ -54,10 +67,13 @@ form.addEventListener("submit", (e) => {
     .then((data) => {
       // used a for loop to connect the data array and the
       // divs array
+      
       for (let i = 0; i < colorContainers.length; i++) {
         // colored divs
-        colorContainers[i].children[0].style.backgroundColor =
-          data.colors[i].hex.value;
+        colorContainers[i].children[0].style.cssText = `
+        background-color: ${data.colors[i].hex.value};
+        opacity: 100;
+        `;
 
         colorContainers[i].children[0].setAttribute(
           "data-value",
@@ -109,4 +125,4 @@ function setMode() {
 }
 
 // check light/dark mode
-setMode()
+setMode();
